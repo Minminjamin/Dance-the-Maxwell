@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useRef } from "react";
 import { PerspectiveCamera } from "three";
@@ -19,6 +19,8 @@ const Screen = () => {
       <Canvas>
         <Suspense fallback={null}>
           <RenderCat />
+
+          <Environment preset="park" background />
 
           <ambientLight intensity={0.1} />
           <directionalLight color="white" />
