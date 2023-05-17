@@ -24,7 +24,11 @@ const Screen = () => {
 
           <ambientLight intensity={0.1} />
           <directionalLight color="white" />
-          <OrbitControls camera={cameraRef.current} enableZoom={true} />
+          <OrbitControls
+            camera={cameraRef.current}
+            enableZoom={true}
+            minDistance={7}
+          />
         </Suspense>
       </Canvas>
     </div>
