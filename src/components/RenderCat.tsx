@@ -7,7 +7,7 @@ const RenderCat = () => {
 
   return (
     <>
-      <primitive object={gltf.scene} />
+      <primitive object={gltf.scene} scale={0.1} />
     </>
   );
 };
