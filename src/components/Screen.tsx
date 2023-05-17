@@ -1,11 +1,26 @@
-import React from "react";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useRef } from "react";
+import { PerspectiveCamera } from "three";
+import RenderCat from "./RenderCat";
 
-const screen = () => {
+const Screen = () => {
+  const cameraRef = useRef<PerspectiveCamera>();
+
   return (
     <div>
-      <span>this is screen component</span>
+      <Canvas>
+        <ambientLight intensity={0.1} />
+        <directionalLight color="red" position={[0, 0, 5]} />
+
+        <OrbitControls camera={cameraRef.current} enableZoom={false} />
+
+        <Suspense fallback={null}>
+          <RenderCat />
+        </Suspense>
+      </Canvas>
     </div>
   );
 };
 
-export default screen;
+export default Screen;
