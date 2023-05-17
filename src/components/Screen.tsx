@@ -21,7 +21,7 @@ const Screen = () => {
           <RenderCat />
 
           <ambientLight intensity={0.1} />
-          <directionalLight color="white" position={[0, 0, 5]} />
+          <directionalLight color="white" />
           <OrbitControls camera={cameraRef.current} enableZoom={true} />
         </Suspense>
       </Canvas>
