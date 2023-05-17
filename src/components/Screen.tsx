@@ -7,8 +7,15 @@ import RenderCat from "./RenderCat";
 const Screen = () => {
   const cameraRef = useRef<PerspectiveCamera>();
 
+  const canvasStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+  };
+
   return (
-    <div>
+    <div style={canvasStyle}>
       <Canvas>
         <ambientLight intensity={0.1} />
         <directionalLight color="red" position={[0, 0, 5]} />
