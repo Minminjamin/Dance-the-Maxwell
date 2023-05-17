@@ -3,7 +3,7 @@ import React from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const RenderCat = () => {
-  const gltf = useLoader(GLTFLoader, "/asset/cat.gltf");
+  const gltf = useLoader(GLTFLoader, "/asset/maxwell/scene.gltf");
 
   return (
     <>
