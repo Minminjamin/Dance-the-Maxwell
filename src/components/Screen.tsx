@@ -1,7 +1,8 @@
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, Html, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useRef } from "react";
 import { PerspectiveCamera } from "three";
+import Bgm from "./Bgm";
 import RenderCat from "./RenderCat";
 
 const Screen = () => {
