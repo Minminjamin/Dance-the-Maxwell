@@ -29,7 +29,7 @@ const RenderCat = () => {
     const mixer = new AnimationMixer(gltf.scene);
     const action = mixer.clipAction(gltf.animations[0]);
     action.play();
-    mixerRef.current = mixer;
+    mixerRef.current = mixer; //위에서 값을 사용가능하도록 mixer 값을 할당
   }, []);
 
   return (
