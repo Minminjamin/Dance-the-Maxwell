@@ -28,6 +28,7 @@ const Screen = () => {
             camera={cameraRef.current}
             enableZoom={true}
             minDistance={7}
+            maxDistance={20}
           />
         </Suspense>
       </Canvas>
