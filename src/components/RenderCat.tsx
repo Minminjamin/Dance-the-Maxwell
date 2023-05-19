@@ -1,9 +1,10 @@
 import { useFrame, useLoader } from "@react-three/fiber";
 import React, { useEffect, useRef } from "react";
-import THREE, { AnimationMixer, Group } from "three";
+import THREE, { AnimationMixer, Group, Vector2 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const RenderCat = () => {
+  // https://velog.io/@iepppop/react-three.js-%EB%B9%9B
   const gltf = useLoader(GLTFLoader, "/asset/maxwell/scene.gltf");
   const modelRef = useRef<Group>();
   const mixerRef = useRef<AnimationMixer>();
