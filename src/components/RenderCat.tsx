@@ -30,7 +30,6 @@ const RenderCat = () => {
     if (modelRef.current) {
       modelRef.current.rotation.y += 80;
     }
-    console.log(gltf);
   }, []);
 
   useFrame((_, delta) => {
