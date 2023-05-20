@@ -1,6 +1,6 @@
 import { useFrame, useLoader } from "@react-three/fiber";
-import React, { useEffect, useRef } from "react";
-import THREE, { AnimationMixer, Group, Vector2 } from "three";
+import React, { MouseEventHandler, useEffect, useRef } from "react";
+import THREE, { AnimationMixer, Group, Vector2, Vector3 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const RenderCat = () => {
@@ -8,6 +8,23 @@ const RenderCat = () => {
   const gltf = useLoader(GLTFLoader, "/asset/maxwell/scene.gltf");
   const modelRef = useRef<Group>();
   const mixerRef = useRef<AnimationMixer>();
+  const moveRef = useRef<Group>(gltf.scene);
+
+  const vec = new Vector3();
+
+  useFrame((state) => {
+    if (moveRef.current) {
+      moveRef.current.position.lerp(
+        vec.set(
+          (state.mouse.x * state.viewport.width) / 2,
+          (state.mouse.y * state.viewport.height) / 2,
+          0
+        ),
+        0.1
+      );
+      moveRef.current.updateMatrixWorld();
+    }
+  });
 
   useEffect(() => {
     if (modelRef.current) {
