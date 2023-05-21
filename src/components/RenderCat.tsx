@@ -5,7 +5,10 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const RenderCat = () => {
   // https://velog.io/@iepppop/react-three.js-%EB%B9%9B
-  const gltf = useLoader(GLTFLoader, "/asset/maxwell/scene.gltf");
+  const gltf = useLoader(
+    GLTFLoader,
+    `${process.env.PUBLIC_URL}/asset/maxwell/scene.gltf`
+  );
   const modelRef = useRef<Group>();
   const mixerRef = useRef<AnimationMixer>();
   const moveRef = useRef<Group>(gltf.scene);
