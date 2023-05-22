@@ -3,7 +3,10 @@ import ReactHowler from "react-howler";
 
 const Bgm = () => {
   return (
-    <ReactHowler src={"/asset/music/Maxwell__Cat_Theme.mp3"} loop={true} />
+    <ReactHowler
+      src={`${process.env.PUBLIC_URL}/asset/music/Maxwell__Cat_Theme.mp3`}
+      loop={true}
+    />
   );
 };
 
