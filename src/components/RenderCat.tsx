@@ -1,6 +1,6 @@
 import { useFrame, useLoader } from "@react-three/fiber";
-import React, { MouseEventHandler, useEffect, useRef } from "react";
-import THREE, { AnimationMixer, Group, Vector2, Vector3 } from "three";
+import React, { useEffect, useRef } from "react";
+import THREE, { AnimationMixer, Group, Vector3 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const RenderCat = () => {
