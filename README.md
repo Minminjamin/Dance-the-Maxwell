@@ -9,11 +9,11 @@ https://minminjamin.github.io/Dance-the-Maxwell/
 
 ## 기술 스택
 
-<p align="center">
+<div>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
   <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=Three.js&logoColor=white">
-</p>
+</div>
 
 ## 📂 디렉토리 구조
 
