@@ -1,7 +1,6 @@
 # 소개
 
-![](https://velog.velcdn.com/images/minmin_jam/post/1a9e29a5-37cc-4a41-b8c5-52051f20abc0/image.gif)
-
+![KakaoTalk_20231113_231900607](https://github.com/Minminjamin/Dance-the-Maxwell/assets/122540708/fd1d2b19-74a4-4ea7-9d2a-371dd2cf0771)
 2022년 happ cat과 함께 밈으로 유행했던 maxwell cat의 춤을 웹 사이트에서 구현한 토이 프로젝트입니다.
 
 ## 개발 기간
