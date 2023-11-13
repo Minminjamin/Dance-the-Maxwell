@@ -51,14 +51,16 @@
 - 초기 로딩 시에 모델이 정면을 바라 보지 않음.
 
   ```
-  	const  modelRef  =  useRef<Group>();
-
-  	useEffect(() => {
-  		if (modelRef.current) {
-  			modelRef.current.rotation.y  +=  80;
-  		}
-  	}, []);
+  const  modelRef  =  useRef<Group>();
   ```
+
+useEffect(() => {
+if (modelRef.current) {
+modelRef.current.rotation.y += 80;
+}
+}, []);
+
+```
 
 - 컴포넌트가 mounte 시에 모델을 참조한 객체를 80도 회전 시켜 정면을 바라 보도록 함.
 
@@ -75,42 +77,46 @@
 
 - gltf에 삽입된 모션(춤) 대로 동작
 
-  - gltf에 있는 애니메이션을 추출 후 mixerRef로 애니메이션 값을 전달
+- gltf에 있는 애니메이션을 추출 후 mixerRef로 애니메이션 값을 전달
 
-  ```
-  	useEffect(() => {
-  		const  mixer  =  new  AnimationMixer(gltf.scene);
-  		const  action  =  mixer.clipAction(gltf.animations[0]);
-  		action.play();
-  		mixerRef.current  =  mixer;
-  	}, []);
+```
 
-  	return (
-  		<>
-  			<primitive  object={gltf.scene} scale={0.1} ref={modelRef} />
-  		</>
-  	);
-  ```
+useEffect(() => {
+const mixer = new AnimationMixer(gltf.scene);
+const action = mixer.clipAction(gltf.animations[0]);
+action.play();
+mixerRef.current = mixer;
+}, []);
+
+return (
+<>
+<primitive  object={gltf.scene} scale={0.1} ref={modelRef} />
+</>
+);
+
+```
 
 - 마우스위 위치값을 3d 모델이 따라 움직임
-  - 전체 뷰퐅트 넓이에 비례한 현재 마우스 값을 추출해 moveRef로 값을 전달
-  ```
-  const  vec  =  new  Vector3();
+- 전체 뷰퐅트 넓이에 비례한 현재 마우스 값을 추출해 moveRef로 값을 전달
+```
 
-  useFrame((state) => {
-  	if (moveRef.current) {
-  		moveRef.current.position.lerp(
-  			vec.set(
-  				(state.mouse.x  *  state.viewport.width) /  2,
-  				(state.mouse.y  *  state.viewport.height) /  2,
-  				0
-  			),
-  			0.1
-  		);
-  		moveRef.current.updateMatrixWorld();
-  	}
-  });
-  ```
+const vec = new Vector3();
+
+useFrame((state) => {
+if (moveRef.current) {
+moveRef.current.position.lerp(
+vec.set(
+(state.mouse.x _ state.viewport.width) / 2,
+(state.mouse.y _ state.viewport.height) / 2,
+0
+),
+0.1
+);
+moveRef.current.updateMatrixWorld();
+}
+});
+
+```
 
 ## Screen.tsx
 
@@ -120,3 +126,4 @@
 # 참고 자료
 
 - https://velog.io/@iepppop/react-three.js-%EB%B9%9B
+```
