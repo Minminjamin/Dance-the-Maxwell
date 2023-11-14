@@ -22,16 +22,13 @@
 
 ## 사용한 기술
 
-<img  src="https://img.shields.io/badge/react-61dafb?style=for-the-badge&logo=React&logoColor=white">
-<img  src="https://img.shields.io/badge/Typescript-3178c6?style=for-the-badge&logo=Typescript&logoColor=white">
-<img  src="https://img.shields.io/badge/Three.js-000?style=for-the-badge&logo=Three.js&logoColor=white">
+<img  src="https://img.shields.io/badge/react-61dafb?style=for-the-badge&logo=React&logoColor=white"><img  src="https://img.shields.io/badge/Typescript-3178c6?style=for-the-badge&logo=Typescript&logoColor=white"><img  src="https://img.shields.io/badge/Three.js-000?style=for-the-badge&logo=Three.js&logoColor=white">
 
 ## 폴더 구조
 
 - src 폴더 밑의 컴포넌트들만 작성
 
 ```
-
 ┣ 📂conponents
 ┃ ┃ ┣ 📜Bgm.tsx
 ┃ ┃ ┣ 📜RenderCat.tsx
@@ -39,7 +36,6 @@
 ┃ ┣ 📜App.tsx
 ┃ ┣ 📜index.tsx
 ┗ ┗ 📜index.css
-
 ```
 
 ## 모델 출처
